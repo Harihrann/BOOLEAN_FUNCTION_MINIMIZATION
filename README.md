@@ -33,18 +33,34 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+```
+module halfsubtractor(a, b, dif, bor);
+    input a;
+    input b;
+    output dif;
+    output bor;
+	        reg dif,bor;
+			  reg abar;
+	        always@(a or b) begin
+	        abar=~a;
+	        dif=a^b;
+	        bor=b&abar;
+	        end
+endmodule
+```
 
-Developed by: RegisterNumber:*/
+Developed by: HARIHARAN 
+RegisterNumber:24005920
 
 
-**RTL realization**
+**RTL SCHEMATIC**
+![4](https://github.com/user-attachments/assets/e3faf0b0-a9ab-4ad7-8906-18c7a556981f)
+![5](https://github.com/user-attachments/assets/1187d2e5-4568-4e57-9202-be2875e23f91)
 
-**Output:**
+**Output TIMING WAVEFORM**
+![6](https://github.com/user-attachments/assets/accf6e50-1ae3-486d-9682-4f164a7a2939)
+![7](https://github.com/user-attachments/assets/e82b3c8a-e97c-4550-beda-c764d06be895)
 
-**RTL**
-
-**Timing Diagram**
 
 **Result:**
 
